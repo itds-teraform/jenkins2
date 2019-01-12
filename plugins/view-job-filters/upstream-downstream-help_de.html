@@ -1,0 +1,33 @@
+<div>
+    Dieser Filter inkludiert Jobs anhand vorgelagerter/nachgelagerter Projektbeziehungen.
+</div>
+
+<h4><u>Nutzen</u></h4>
+
+<p>
+    Nützlich um Jobs zusammen anzuzeigen, die anhand der "Starte Build, nachdem andere Projekte gebaut wurden" und
+    "Weitere Projekte bauen" Optionen miteinander in Verbindung stehen.
+</p>
+
+<h4><u>Optionen</u></h4>
+
+<dl>
+    <dt>Füge nachgelagerte Jobs hinzu:</dt>
+    <dd>Trifft auf alle Jobs zu, die von einem bereits hinzugefügten Job abhängen.</dd>
+    <dt>Füge vorgelagerte Jobs hinzu:</dt>
+    <dd>Trifft auf alle Jobs zu, die einen bereits hinzugefügten Job als Abhängigkeit haben.</dd>
+    <dt>Füge vorgelagerte/nachgelagerte Jobs rekursiv hinzu:</dt>
+    <dd>Füge auch Job hinzu, die über transitive Abhängigkeit miteinander verknüpft sind.</dd>
+    <dt>Verwerfe Original-Jobs:</dt>
+    <dd>Zeige nur vorgelagerte/nachgelagerte Jobs an, nicht die ursprünglichen Jobs, auf denen dieser Filter aufbaut.</dd>
+</dl>
+
+<h4><u>Anmerkungen</u></h4>
+
+<p>
+    Dieser Filter fügt selbst keine Jobs hinzu, stattdessen baut er auf vorherigen Filtern auf. Insbesondere heißt das:
+</p>
+<ul>
+    <li>Dieser Filter fügt keine Jobs hinzu, wenn nicht ohnehin schon Jobs ausgewählt sind.</li>
+    <li>Dieser Filter (wie die meisten Filter) kann Jobs ausschließen, die vorher selektiert waren.</li>
+</ul>

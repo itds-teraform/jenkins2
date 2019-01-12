@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: sven
+Build-Jdk: 1.8.0_112
+Extension-Name: view-job-filters
+Specification-Title: Manage multiple views and hundreds of jobs much m
+ ore easily. This plug-in provides more ways to
+         include/exclude jobs from a view, including filtering by SCM 
+ path, and by any job or build status type, as well
+         as "chaining" of filters and negating filters.
+Implementation-Title: view-job-filters
+Implementation-Version: 2.1.1
+Group-Id: org.jenkins-ci.plugins
+Short-Name: view-job-filters
+Long-Name: View Job Filters
+Url: http://wiki.jenkins-ci.org/display/JENKINS/View+Job+Filters
+Plugin-Version: 2.1.1
+Hudson-Version: 1.625.3
+Jenkins-Version: 1.625.3
+Plugin-Dependencies: workflow-job:2.0;resolution:=optional,cvs:2.9;res
+ olution:=optional,email-ext:2.37;resolution:=optional,git:1.2.0;resol
+ ution:=optional,m2-extra-steps:1.1.8;resolution:=optional,mailer:1.21
+ ;resolution:=optional,matrix-auth:1.0;resolution:=optional,matrix-pro
+ ject:1.0;resolution:=optional,subversion:1.24;resolution:=optional
+Plugin-Developers: Sven Schoenung::sven.schoenung@gmail.com
+

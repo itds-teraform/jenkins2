@@ -1,0 +1,14 @@
+<div>This filter:
+    <ul>
+        <li>Adds all jobs to this view if no jobs are included by the previous filters.</li>
+        <li>Removes all jobs from this view if all jobs are included by the previous filters.</li>
+    </ul>
+</div>
+
+<h4><u>Rationale</u></h4>
+
+<p>
+    Useful if you have filters that might include all jobs or no jobs at all. In that case
+    this filter can act as a fallback to ensures that this view either never will be empty
+    or never will contain all jobs.
+</p>

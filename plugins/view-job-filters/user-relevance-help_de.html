@@ -1,0 +1,42 @@
+<div>
+    Dieser Filter inkludiert/exkludiert Jobs abhängig davon ob die ID oder der Name des aktuellen Benutzers
+    irgendwo vorkommt.
+</div>
+
+<h4><u>Optionen</u></h4>
+
+<dl>
+    <dt>Namenssuche:</dt>
+    <dd>
+        Gibt an, ob die Jobs nach der ID oder dem Namen des aktuellen Benutzers durchsucht
+        werden sollen. Der Namensvergleich kann dahingehend angepasst werden, dass
+        bestimmte Buchstaben ignoriert werden.
+    </dd>
+    <dt>Zutreffende Jobs:</dt>
+    <dd>
+        Gibt an, welche Eigenschaften eines Jobs nach der ID oder dem Namen des aktuellen Benutzers
+        durchsucht werden.
+    </dd>
+    <dt>Zutreffende Builds:</dt>
+    <dd>
+        Gibt an, wie viele Builds die ID oder den Namen des aktuellen Benutzers enthalten müssen,
+        damit dieser Filter auf den Job zutrifft.
+    </dd>
+    <dt>Zurückliegender Bereich:</dt>
+    <dd>
+        Ein Job kann viele Builds haben und diese Option bestimmt, wie viele dieser Builds zur
+        Überprüfung herangezogen werden. Die Angabe geht rückwärts vom letzten Build aus und kann
+        eine Dezimalzahl sein, z.B. <kbd>1.5</kbd> Stunden. Um alle Builds heranzuziehen kann <kb>0</kb>
+        als Wert angegeben werden.
+    </dd>
+    <dt>Filter-Typ:</dt>
+    <dd>
+        Gibt an ob Jobs hinzugefügt oder entfernt werden sollen. Es gibt zwei mögliche Arten von Filter-Typen:<br>
+        <ul style="margin-top:0px">
+            <li>Zutreffende/Unzutreffende aufnehmen: Fügt zusätzliche Job zu dieser Ansicht hinzu.</li>
+            <li>Zutreffende/Unzutreffende auschließen: Entfernt Jobs aus dieser Ansicht, die durch vorherige Filter
+                hinzugefügt wurden.
+            </li>
+        </ul>
+    </dd>
+</dl>

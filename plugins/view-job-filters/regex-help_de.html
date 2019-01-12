@@ -1,0 +1,66 @@
+<div>
+    Dieser Filter inkludiert/exkludiert Jobs abhängig davon ob bestimmte
+    Job-Eigenschaften auf einen Regulären Ausdruck zutreffen.
+</div>
+
+<h4><u>Optionen</u></h4>
+
+<dl>
+    <dt>Regulärer Ausdruck:</dt>
+    <dd>
+        Der Reguläre Ausdruck, der verwendet werden soll.
+        Siehe die <a href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">vollständige Liste
+        der verfügbaren Ausdrücke</a>.
+    </dd>
+    <dt>Wert:</dt>
+    <dd>Die Job-Eigenschaft mit der verglichen werden soll. Eine der folgenden Eigenschaften:
+        <ul style="margin:0px">
+            <li><i>Job-Name</i>
+                <ul>
+                    <li><i>Name</i> des Jobs selbst, z.B. 'job'</li>
+                    <li><i>Vollständiger Name</i> des Jobs einschließlich Elternordner, z.B. 'ordner/unterordner/job'
+                    </li>
+                    <li><i>Anzeigename</i> des Jobs, z.B. 'Job'</li>
+                    <li><i>Vollständiger Anzeigename</i> des Jobs einschließlich Elternordner, z.B. 'Ordner »
+                        Unterordner » Job'
+                    </li>
+                </ul>
+            </li>
+            <li><i>Ordner-Name</i>: Name des Elternordners
+                <ul>
+                    <li><i>Name</i> des Elternordners, z.B. 'unterordner'</li>
+                    <li><i>Vollständiger Name</i> des Elternordners einschließlich eigener Elternordner, z.B.
+                        'ordner/unterordner'
+                    </li>
+                    <li><i>Anzeigename</i> des Elternordners, z.B. 'Job'</li>
+                    <li><i>Vollständiger Anzeigename</i> des Elternordners einschließlich eigener Elternordner, z.B.
+                        'Ordner » Unterordner'
+                    </li>
+                </ul>
+            </li>
+            <li><i>Job-Beschreibung</i></li>
+            <li><i>SCM-Konfiguration</i>: Auswahl anhand des SCMs ist nützlich wenn man hunderte von Jobs hat, die
+                automatisch organisiert werden sollen, und die im SCM bereits organisiert sind.
+                (Zieht momentan die Pfade/Konfiguration für CVS, SVN und git heran.)
+            </li>
+            <li><i>Email-Empfänger</i>: Auswahl anhand der Email ist ein nützliches Kriterium für "Wer interessiert sich
+                für diesen Job?"
+            </li>
+            <li><i>Maven-Konfiguration</i></li>
+            <li><i>Build-Zeitplan</i>: Vergleich mit dem CRON Ausdruck (und Kommentaren) für zeitgesteuerte Builds und
+                Builds anhand regelmäßiger SCM-Abfragen
+            </li>
+            <li><i>Node Label Ausdruck</i>: Vergleich mit dem Label-Ausdruck der Option "Beschränke, wo dieses Projekt
+                ausgeführt werden darf".
+            </li>
+        </ul>
+    </dd>
+    <dt>Filter-Typ:</dt>
+    <dd>
+        Gibt an ob Jobs hinzugefügt oder entfernt werden sollen. Es gibt zwei mögliche Arten von Filter-Typen:<br>
+        <ul style="margin-top:0px">
+            <li>Zutreffende/Unzutreffende aufnehmen: Fügt zusätzliche Job zu dieser Ansicht hinzu.</li>
+            <li>Zutreffende/Unzutreffende auschließen: Entfernt Jobs aus dieser Ansicht, die durch vorherige Filter hinzugefügt wurden.</li>
+        </ul>
+    </dd>
+</dl>

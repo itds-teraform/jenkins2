@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: jieshe
+Build-Jdk: 1.8.0_191
+Extension-Name: azure-vm-agents
+Specification-Title: Provisions agents on Azure cloud
+Implementation-Title: azure-vm-agents
+Implementation-Version: 0.7.5
+Plugin-Class: com.microsoft.azure.vmagent.AzureVMAgentPlugin
+Group-Id: org.jenkins-ci.plugins
+Short-Name: azure-vm-agents
+Long-Name: Azure VM Agents
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Azure+VM+Agents+Plugin
+Plugin-Version: 0.7.5
+Hudson-Version: 1.653
+Jenkins-Version: 1.653
+Mask-Classes: com.microsoft.jenkins.azurecommons.core.                
+         com.fasterxml.jackson.                        com.google.comm
+ on.                        com.nimbusds.                        com.m
+ icrosoft.azure.AzureAsyncOperation                        com.microso
+ ft.azure.AzureClient                        com.microsoft.azure.Azure
+ Environment                        com.microsoft.azure.AzureResponseB
+ uilder                        com.microsoft.azure.AzureServiceClient 
+                        com.microsoft.azure.AzureServiceFuture        
+                 com.microsoft.azure.CloudError                       
+  com.microsoft.azure.CloudException                        com.micros
+ oft.azure.ListOperationCallback                        com.microsoft.
+ azure.Page                        com.microsoft.azure.PagedList      
+                   com.microsoft.azure.PollingState                   
+      com.microsoft.azure.Resource                        com.microsof
+ t.azure.SubResource                        com.microsoft.aad.        
+                 com.microsoft.applicationinsights.                   
+      com.microsoft.azure.credentials.                        com.micr
+ osoft.azure.keyvault.                        com.microsoft.azure.mana
+ gement.                        com.microsoft.azure.serializer.       
+                  com.microsoft.azure.storage.                        
+ com.microsoft.rest.
+Plugin-Dependencies: plain-credentials:1.4,azure-credentials:1.4.0,cre
+ dentials:2.1.5,cloud-stats:0.11,azure-commons:0.2.4
+Plugin-Developers: Azure DevOps Team:azure_devops:vscjenkins@microsoft
+ .com
+

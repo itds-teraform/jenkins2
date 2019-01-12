@@ -1,0 +1,64 @@
+<div>
+  <p><b>At a minimum, the init script needs to install a Java runtime.</b></p>
+  <p>Custom prepared images are recommended if the initialization script is taking more than 20 minutes to execute.</p>
+  <p>
+    Below are examples of initialization scripts, Java is <b>required</b>, others are optional:
+    <ol>
+      <li>
+        <b>Ubuntu (Only support SSH)</b>
+        <p>
+          <pre><code># Install Java
+sudo add-apt-repository ppa:openjdk-r/ppa -y
+sudo apt-get -y update
+sudo apt-get install openjdk-8-jre openjdk-8-jre-headless openjdk-8-jdk -y
+
+# Install Git
+sudo apt-get install -y git
+
+# Install Maven
+sudo curl -O https://archive.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
+sudo tar zxvf apache-maven-3.5.2-bin.tar.gz -C /opt/
+sudo ln -s /opt/apache-maven-3.5.2/bin/mvn /usr/bin/mvn
+
+# Install Docker
+sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get -y update
+sudo apt-get install -y docker-ce
+# Replace ${ADMIN} with admin username.
+sudo gpasswd -a ${ADMIN} docker
+sudo chmod g+rw /var/run/docker.sock</code></pre>
+        </p>
+      </li>
+      <li>
+        <b>Windows via SSH</b>
+        <p>
+          You can use this <a target="_blank" href="https://raw.githubusercontent.com/Azure/jenkins/master/agents_scripts/Jenkins-Windows-Init-Script-SSH.ps1">sample</a>.<br>
+          Java is <b>required</b>, others are optional.<br>
+          We recommend to use SSH rather than JNLP. For you need less init codes and get much clearer logs.
+        </p>
+      </li>
+      <li>
+        <b>Windows w/JNLP</b>
+        <p>
+          For Windows agents with JNLP launch, this script is a powershell script.
+          You can use this <a target="_blank" href="https://raw.githubusercontent.com/Azure/jenkins/master/agents_scripts/Jenkins-Windows-Init-Script-Jnlp.ps1">sample</a>.<br>
+          Java, slaves and connection are <b>required</b>, others are optional.<br>
+        </p>
+        <p>
+          Arguments automatically passed to this script are:
+          <ul>
+            <li>First argument - Jenkins server URL</li>
+            <li>Second argument - VMName</li>
+            <li>Third argument - JNLP secret, required if the server has security enabled.</li>
+          </ul>
+        </p>
+        <p>
+          The server url should already have a trailing slash.  Then execute the following to connect:
+          <pre><code>java.exe -jar [slave jar location] [-secret [client secret if required]] [server url]computer/[vm name]/slave-agent.jnlp</code></pre>
+        </p>
+      </li>
+    </ol>
+  </o>
+</div>

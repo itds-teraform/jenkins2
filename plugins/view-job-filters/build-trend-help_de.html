@@ -1,0 +1,39 @@
+<div>
+	Dieser Filter inkludiert/exkludiert Jobs abhängig davon wie Builds gestart wurden und geendet haben.
+<br/>
+
+<h4><u>Options</u></h4>
+
+<dl>
+	<dt>Build-Trend:</dt>
+	<dd>
+        Gibt an wie die Builds eines Jobs gestart wurden oder geendet haben müssen, damit dieser
+		Filter auf einen Job zutrifft.
+	</dd>
+	<dt>Zurückliegender Bereich:</dt>
+	<dd>
+		Ein Job kann viele Builds haben und diese Option bestimmt, wie viele dieser Builds zur
+		Überprüfung herangezogen werden. Die Angabe geht rückwärts vom letzten Build aus und kann
+		eine Dezimalzahl sein, z.B. <kbd>1.5</kbd> Stunden. Um alle Builds heranzuziehen kann <kb>0</kb>
+		als Wert angegeben werden.
+	</dd>
+	<dt>Filter-Typ:</dt>
+	<dd>
+		Gibt an ob Jobs hinzugefügt oder entfernt werden sollen. Es gibt zwei mögliche Arten von Filter-Typen:<br>
+		<ul style="margin-top:0px">
+			<li>Zutreffende/Unzutreffende aufnehmen: Fügt zusätzliche Job zu dieser Ansicht hinzu.</li>
+			<li>Zutreffende/Unzutreffende auschließen: Entfernt Jobs aus dieser Ansicht, die durch vorherige Filter hinzugefügt wurden.</li>
+		</ul>
+	</dd>
+</dl>
+
+<h4><u>Beispiele</u></h4>
+
+<ul>
+	<li>Zeige alle Jobs, die innerhalb der letzten 3 Stunden liefen.</li>
+	<li>Zeige alle Jobs, die die letzten 10 Builds stabil geblieben sind.</li>
+	<li>Zeige alle Jobs, die mindestens einen nicht stabilen Build innerhalb der letzten Woche hatten.</li>
+	<li>Zeige alle Jobs, die in den letzten 7 Tagen nicht ausgeführt wurden.</li>
+	<li>Zeige alle Jobs, die in den letzten 30 Tagen nicht von einer SCM-Änderung ausgelöst wurden.</li>
+	<li>Zeige alle Jobs, die zuletzt von einem entfernten Rechner ausgelöst wurden.</li>
+</ul>
